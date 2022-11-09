@@ -6,52 +6,52 @@ export default{
             links:[
                 {
                     name: "CHARACTERS",
-                    href: "",
+                    href: "/characters",
                     active: false
                 },
                 {
                     name: "COMICS",
-                    href: "",
-                    active: false,
+                    href: "/comics",
+                    active: true,
                 },
                 {
                     name: "MOVIES",
-                    href: "",
+                    href: "/movies",
                     active: false
                 },
                 {
                     name: "TV",
-                    href: "",
+                    href: "/tv",
                     active: false
                 },
                 {
                     name: "GAMES",
-                    href: "",
+                    href: "/games",
                     active: false
                 },
                 {
                     name: "COLLECTIBLES",
-                    href: "",
+                    href: "collectibles",
                     active: false
                 },
                 {
                     name: "VIDEO",
-                    href: "",
+                    href: "video",
                     active: false
                 },
                 {
                     name: "FANS",
-                    href: "",
+                    href: "fans",
                     active: false
                 },
                 {
                     name: "NEWS",
-                    href: "",
+                    href: "news",
                     active: false
                 },
                 {
                     name: "SHOP",
-                    href: "",
+                    href: "shop",
                     active: false
                 },
             ]
@@ -82,25 +82,26 @@ export default{
 
 header{
     background-color: white;
+
 }
     .container{
         @include flex-center();
         justify-content: space-between;
-    }
         ul{
             line-height: 140px;
             @include flex-center();
             
         }
-            li{
-                margin-left: 1.5rem;
+        li{
+            margin-left: 1.5rem;
+        }
+        a {
+            &:hover,
+            &.active {
+                display: inline-block;
+                border-bottom: 3px solid blue;
             }
-            a {
-                    &:hover,
-                    &.active {
-                        height: 140px;
-                        border-bottom: 3px solid blue;
-                    }
-                }
+        }
+    }
 
 </style>
