@@ -89,8 +89,11 @@ export default{
 
 <template>
     <section class="card-section">
+
         <div class="container-test">
+            <div class="btn-series">current series</div>
             <AppCard v-for="(card, index) in cards" :key="index" :cardImg="card.thumb" :cardSeries="card.series" />
+            <div class="btn"><a href="">load more</a></div>
         </div>
     </section>
 
@@ -102,11 +105,36 @@ export default{
         .container-test{
         width: 80%;
         margin: 0 auto;
+        padding: 3rem 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        padding: 1.5rem; 
+        
         position: relative;
+            .btn{
+                background-color: #0282F9;
+                text-align: center;
+                display: inline-block;
+                margin: 1.5rem;
+                padding: .5rem 3rem;
+        
+                a{
+                    color: white;
+                    text-transform: uppercase;
+                    
+                }
+            }
+            .btn-series{
+                background-color: #0282F9;
+                position: absolute;
+                left: 0;
+                top: -10px;
+                text-transform: uppercase;
+                color: white;
+                font-size: 2rem;
+                padding: .5rem 1rem;
+            }
     }
+    
 }
 </style>
